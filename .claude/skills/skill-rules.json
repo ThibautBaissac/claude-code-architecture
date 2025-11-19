@@ -1,0 +1,259 @@
+{
+  "version": "1.0.0",
+  "description": "Skill activation rules for this Rails application",
+  "skills": [
+    {
+      "name": "rails-dev-guidelines",
+      "description": "Rails MVC patterns, ActiveRecord, conventions, and best practices",
+      "mode": "suggest",
+      "priority": "high",
+      "triggers": {
+        "keywords": [
+          "model",
+          "controller",
+          "ActiveRecord",
+          "migration",
+          "association",
+          "validation",
+          "callback",
+          "scope",
+          "Rails",
+          "routing",
+          "routes",
+          "action",
+          "before_action",
+          "helper",
+          "concern",
+          "service object",
+          "form object",
+          "query object"
+        ],
+        "intentPatterns": [
+          "create a model",
+          "generate a controller",
+          "add a migration",
+          "create an association",
+          "add validation",
+          "refactor controller",
+          "create a service",
+          "extract to concern"
+        ],
+        "filePatterns": [
+          "app/models/**/*.rb",
+          "app/controllers/**/*.rb",
+          "app/helpers/**/*.rb",
+          "app/services/**/*.rb",
+          "app/queries/**/*.rb",
+          "app/forms/**/*.rb",
+          "db/migrate/**/*.rb",
+          "config/routes.rb"
+        ],
+        "excludePatterns": [
+          "**/*_spec.rb",
+          "spec/**/*.rb"
+        ]
+      }
+    },
+    {
+      "name": "rspec-testing-guidelines",
+      "description": "RSpec testing patterns, factories, mocks, and test best practices",
+      "mode": "suggest",
+      "priority": "high",
+      "triggers": {
+        "keywords": [
+          "test",
+          "spec",
+          "RSpec",
+          "factory",
+          "FactoryBot",
+          "mock",
+          "stub",
+          "expect",
+          "describe",
+          "context",
+          "it",
+          "shoulda-matchers",
+          "feature",
+          "request spec",
+          "system spec",
+          "model spec",
+          "controller spec"
+        ],
+        "intentPatterns": [
+          "write a test",
+          "add specs",
+          "create factory",
+          "test the model",
+          "test the controller",
+          "add test coverage",
+          "fix failing test",
+          "write request spec"
+        ],
+        "filePatterns": [
+          "spec/**/*_spec.rb",
+          "spec/factories/**/*.rb",
+          "spec/support/**/*.rb",
+          "spec/rails_helper.rb",
+          "spec/spec_helper.rb"
+        ]
+      }
+    },
+    {
+      "name": "devise-auth-patterns",
+      "description": "Devise authentication setup, customization, and security best practices",
+      "mode": "suggest",
+      "priority": "medium",
+      "triggers": {
+        "keywords": [
+          "devise",
+          "authentication",
+          "sign in",
+          "sign up",
+          "login",
+          "logout",
+          "password",
+          "confirmable",
+          "lockable",
+          "trackable",
+          "recoverable",
+          "registerable",
+          "current_user",
+          "authenticate_user",
+          "user session"
+        ],
+        "intentPatterns": [
+          "add authentication",
+          "customize devise",
+          "protect route",
+          "require authentication",
+          "configure devise"
+        ],
+        "filePatterns": [
+          "app/models/user.rb",
+          "config/initializers/devise.rb",
+          "app/controllers/users/**/*.rb",
+          "app/views/devise/**/*"
+        ]
+      }
+    },
+    {
+      "name": "frontend-rails-patterns",
+      "description": "Rails views, Turbo, Stimulus, Tailwind CSS, and frontend asset management",
+      "mode": "suggest",
+      "priority": "medium",
+      "triggers": {
+        "keywords": [
+          "view",
+          "template",
+          "erb",
+          "turbo",
+          "stimulus",
+          "hotwire",
+          "tailwind",
+          "css",
+          "javascript",
+          "importmap",
+          "frame",
+          "stream",
+          "controller",
+          "action",
+          "target",
+          "partial",
+          "render",
+          "layout"
+        ],
+        "intentPatterns": [
+          "create a view",
+          "add a partial",
+          "style with tailwind",
+          "add stimulus controller",
+          "use turbo frame",
+          "add interactivity",
+          "render a template"
+        ],
+        "filePatterns": [
+          "app/views/**/*.html.erb",
+          "app/views/**/*.turbo_stream.erb",
+          "app/javascript/**/*.js",
+          "app/assets/stylesheets/**/*.css",
+          "config/importmap.rb"
+        ]
+      }
+    },
+    {
+      "name": "database-design-patterns",
+      "description": "Database schema design, migrations, indexing, and query optimization",
+      "mode": "suggest",
+      "priority": "medium",
+      "triggers": {
+        "keywords": [
+          "migration",
+          "schema",
+          "index",
+          "foreign key",
+          "database",
+          "column",
+          "table",
+          "add_column",
+          "create_table",
+          "add_index",
+          "add_reference",
+          "query optimization",
+          "n+1",
+          "includes",
+          "joins",
+          "eager loading"
+        ],
+        "intentPatterns": [
+          "create a migration",
+          "add an index",
+          "modify schema",
+          "optimize query",
+          "fix n+1 query",
+          "add foreign key"
+        ],
+        "filePatterns": [
+          "db/migrate/**/*.rb",
+          "db/schema.rb"
+        ]
+      }
+    },
+    {
+      "name": "security-best-practices",
+      "description": "Rails security patterns, CSRF protection, XSS prevention, and authorization",
+      "mode": "block",
+      "priority": "high",
+      "triggers": {
+        "keywords": [
+          "params",
+          "permit",
+          "strong parameters",
+          "sql injection",
+          "xss",
+          "csrf",
+          "authorization",
+          "pundit",
+          "cancancan",
+          "raw",
+          "html_safe",
+          "sanitize",
+          "authenticate",
+          "authorize"
+        ],
+        "intentPatterns": [
+          "handle params",
+          "add authorization",
+          "secure endpoint",
+          "prevent sql injection",
+          "protect against"
+        ],
+        "filePatterns": [
+          "app/controllers/**/*.rb"
+        ],
+        "excludePatterns": [
+          "**/*_spec.rb"
+        ]
+      }
+    }
+  ]
+}

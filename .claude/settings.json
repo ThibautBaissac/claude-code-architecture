@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "userPromptSubmit": [
+      {
+        "command": "node .claude/hooks/skill-activation-prompt.js",
+        "description": "Auto-suggest relevant skills based on prompt and context"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": ".claude/hooks/post-tool-use-tracker.sh",
+        "description": "Track modified files and suggest relevant checks"
+      }
+    ]
+  }
+}
