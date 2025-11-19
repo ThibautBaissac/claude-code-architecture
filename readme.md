@@ -149,4 +149,3 @@ See LICENSE file for details.
 ---
 
 **Built for the Rails community** | **Star if useful!** ⭐
-# claude-code-architecture
